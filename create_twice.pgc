@@ -50,7 +50,7 @@ connect_db(struct connection *connection)
 static long
 create_temporary(void)
 {
-    EXEC SQL CREATE TEMPORARY TABLE IF NOT EXISTS temporary(dummy INTEGER);
+    EXEC SQL CREATE TEMPORARY TABLE IF NOT EXISTS same_name(dummy INTEGER);
     SQL_WARN("Create Temporary Table");
     return sqlca.sqlcode;
 }
