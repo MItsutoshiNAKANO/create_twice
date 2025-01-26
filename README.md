@@ -11,12 +11,12 @@ sqlcaは0で、sqlerrmcは
 またsqlstateをいきなり見ず、
 sqlcaを見るかWHENEVERを使えば回避できます。
 
-しかし、
-<https://www.postgresql.org/docs/current/ecpg-errors.html#ECPG-SQLSTATE-SQLCODE>
-<https://www.postgresql.org/docs/16/ecpg-errors.html#ECPG-SQLSTATE-SQLCODE>
-<https://www.postgresql.jp/docs/16/ecpg-errors.html#ECPG-SQLSTATE-SQLCODE>
-等を見ると、
+しかし、以下を見ると、
 sqlstateだけでエラー・非エラーを区別できるべきようにも思えます。
+
+* <https://www.postgresql.org/docs/current/ecpg-errors.html#ECPG-SQLSTATE-SQLCODE>
+* <https://www.postgresql.org/docs/16/ecpg-errors.html#ECPG-SQLSTATE-SQLCODE>
+* <https://www.postgresql.jp/docs/16/ecpg-errors.html#ECPG-SQLSTATE-SQLCODE>
 
 私がsqlstateに対して誤解しているのか、バグなのかどちらでしょうか?
 
