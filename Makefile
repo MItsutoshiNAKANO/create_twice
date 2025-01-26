@@ -13,7 +13,7 @@ TARGETS=create_twice
 create_twice_ECPG_SRCS=create_twice.pgc sql_error.pgc
 create_twice_HEADERS=sql_error.h
 
-create_twice_OBJS=$(create_twice_ECPG_SRCS:.pgc=.o) $(create_twice_C_SRCS:.c=.o)
+create_twice_OBJS=$(create_twice_ECPG_SRCS:.pgc=.o)
 create_twice_CS=$(create_twice_ECPG_SRCS:.pgc=.c)
 
 ECPG=ecpg
@@ -31,6 +31,6 @@ $(create_twice_OBJS): $(create_twiceHEADERS)
 %.c: %.pgc
 	$(ECPG) -o $@ $<
 format:
-	$(FORMAT) $(FORMAT_FLAGS) $(create_twice_ECPG_SRCS) $(create_twice_C_SRCS)
+	$(FORMAT) $(FORMAT_FLAGS) $(create_twice_ECPG_SRCS) $(create_twice_HEADERS)
 clean:
 	$(RM) $(TARGETS) $(create_twice_OBJS) $(create_twice_CS)
