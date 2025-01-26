@@ -24,7 +24,7 @@ vsql_warn(
 {
     vwarnx(fmt, ap);
     warnx(
-        "%s:%ld:%s(): sqlcode: %ld, sqlstate: %5s, sqlerrml: %d, sqlerrmc %s",
+        "%s:%ld:%s(): sqlcode: %ld, sqlstate: %5s, sqlerrml: %d, sqlerrmc: %s",
         file, line, func, sqlca.sqlcode, sqlca.sqlstate, sqlca.sqlerrm.sqlerrml,
         sqlca.sqlerrm.sqlerrmc
     );
